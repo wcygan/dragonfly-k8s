@@ -1,0 +1,19 @@
+apiVersion: skaffold/v4beta1
+kind: Config
+metadata:
+  name: dragonfly-example
+
+requires:
+  - configs:
+    - dragonfly-config
+    path: dragonfly/skaffold.yaml
+
+profiles:
+  - name: bootstrap
+    patches:
+      - op: replace
+        path: /requires
+        value:
+          - configs:
+            - dragonfly-operator-install
+            path: dragonfly/skaffold.yaml
