@@ -13,9 +13,11 @@ Check for the pods to be ready:
 
 ```bash
 kubectl get pods -n dragonfly-operator-system
-NAME                                                     READY   STATUS    RESTARTS   AGE
-dragonfly-operator-controller-manager-547ddd69d9-jlnsr   2/2     Running   0          77s
-example-cache-0                                          1/1     Running   0          53s
+NAME                                                     READY   STATUS    RESTARTS        AGE
+dragonfly-operator-controller-manager-547ddd69d9-jlnsr   2/2     Running   0               3d23h
+example-cache-0                                          1/1     Running   0               3d23h
+example-cache-1                                          1/1     Running   0               3d23h
+example-cache-2                                          1/1     Running   2 (4h22m ago)   3d23h
 ```
 
 ## Example Usage
